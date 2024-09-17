@@ -15,7 +15,10 @@ from django.dispatch import receiver
 import time
 
 #called when user login 
+
+
 def login_success(sender,request,user,**kwargs):
+   
     print("Login was successfull")
     
     print("sender",sender)
@@ -25,6 +28,7 @@ def login_success(sender,request,user,**kwargs):
     print("User",sender)
 
 #after this this will be executed
+
 def login_step2(sender,request,user,**kwargs):
     print("Sent notification")
 
