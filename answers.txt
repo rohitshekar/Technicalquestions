@@ -2,6 +2,7 @@
 Question 1: By default are django signals executed synchronously or asynchronously? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic
 
 A)By default  django signals are  executed synchronously a sender can have multiple receiver function subscribed to it and all receiver function called one at a time in order they have registered.
+
 example code
 Here we user django built in model user and built in signals logged_in,logged_out
 Here sender is user and receiver function is login_success,login_step2 
@@ -44,7 +45,8 @@ Question 2: Do django  ? Please support your answer with a code snippet that con
 
 A)Yes Django signal run in the same thread as caller to avoid multithreading and concurrency issues let take above example and modify to prove it
 
-Here in this example when user log in in django admin page the signal calls login_success function after 20 seconds when function completed successfully then only user will be logged in django admin page till then it keeps loading until login_success  is executed this proves signals run in the same thread as the caller.
+Here in this example when user login in django admin page the signal calls login_success function after 20 seconds when function completed successfully then only user will be logged in django admin page till then it keeps loading until login_success  is executed this proves signals run in the same thread as the caller.
+
 import time
 #called when user login 
 def login_success(sender,request,user,**kwargs):
