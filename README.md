@@ -1,10 +1,10 @@
 # Technicalquestions
 Question 1: By default are django signals executed synchronously or asynchronously? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic
 
-A)By default  django signals are  executed synchronously a sender can have multiple reciver function sunscribed to it and all reciever function called one at a time in order they have registered.
+A)By default  django signals are  executed synchronously a sender can have multiple receiver function sunscribed to it and all receiever function called one at a time in order they have registered.
 example code
 Here we user django built in model user and built in signals logged_in,logged_out
-Here sender is user and reciver function is login_success,login_step2 
+Here sender is user and receiver function is login_success,login_step2 
 login_success executes when user logs in django admin page and after login_step2 is called then login succesfully is printed in  terminal
 
 from django.contrib.auth.signals import user_logged_in,user_logged_out,user_login_failed
@@ -62,7 +62,7 @@ Question 3: By default do django signals run in the same database transaction as
 
 A)Yes django signals run in the same database transaction as the caller to maintain integrity and acid properites and to avoid transcation concurrency problem django uses single thread for signals run  and database transaction as the caller.
 Lets  take above example
-When user logs his creditionals is checked in database after validation the user login then login_sucess function is called here it is done by single thread database transcation,signal,recicver function execution to aviod failure and to maintain intergrity and acid properites
+When user logs his creditionals is checked in database after validation the user login then login_sucess function is called here it is done by single thread database transcation,signal,receiver function execution to aviod failure and to maintain intergrity and acid properites
 
 Topic: Custom Classes in Python
 
