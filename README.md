@@ -17,8 +17,11 @@ import time
 #called when user login 
 def login_success(sender,request,user,**kwargs):
     print("Login was successfull")
+    
     print("sender",sender)
+    
     print("Request",request)
+    
     print("User",sender)
 
 #after this this will be executed
