@@ -89,6 +89,7 @@ class Rectangle:
 a=Rectangle(4,5)
 
 b=Rectangle(5,6)
+
 print(a)
 
 print(b)
