@@ -97,4 +97,4 @@ print(a)
 
 print(b)
 
-answers.py consists code and answers.txt has answers in text forma
+signals.py consists code and answers.txt has answers in text forma
