@@ -77,14 +77,18 @@ A)
 
 class Rectangle:
    def __init__(self,length,width):
+   
         self.length=length
         self.width=width
 
   
    def __str__(self):
+   
       return  str({f'length:{self.length},width:{self.width}'})
 
 a=Rectangle(4,5)
+
 b=Rectangle(5,6)
 print(a)
+
 print(b)
