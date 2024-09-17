@@ -37,7 +37,7 @@ def login_step2(sender,request,user,**kwargs):
 user_logged_in.connect(login_success,sender=User)#first we registered login_success it will be executed first
 user_logged_in.connect(login_step2,sender=User)#After login_sucess this will be called
 
-As we can see here login_succes abd login_step2 dependent on each other hence django signals are executed synchronously
+As we can see here login_succes and login_step2 dependent on each other hence django signals are executed synchronously
 
 Question 2: Do django  ? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
 
