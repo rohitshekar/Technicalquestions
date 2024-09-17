@@ -1,3 +1,4 @@
+
 # Technicalquestions
 Question 1: By default are django signals executed synchronously or asynchronously? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic
 
@@ -95,3 +96,5 @@ b=Rectangle(5,6)
 print(a)
 
 print(b)
+
+answers.py consists code and answers.txt has answers in text forma
