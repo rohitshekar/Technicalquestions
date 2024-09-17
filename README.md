@@ -47,6 +47,7 @@ Here in this example when user log in in django admin page the signal calls logi
 import time
 #called when user login 
 def login_success(sender,request,user,**kwargs):
+
     print("Login was successfull")
     
     print("sender",sender)
@@ -79,6 +80,7 @@ class Rectangle:
         self.length=length
         self.width=width
 
+  
    def __str__(self):
       return  str({f'length:{self.length},width:{self.width}'})
 
