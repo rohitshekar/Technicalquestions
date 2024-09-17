@@ -7,8 +7,11 @@ Here sender is user and reciver function is login_success,login_step2
 login_success executes when user logs in django admin page and after login_step2 is called then login succesfully is printed in  terminal
 
 from django.contrib.auth.signals import user_logged_in,user_logged_out,user_login_failed
+
 from django.contrib.auth.models import User
+
 from django.dispatch import receiver
+
 import time
 
 #called when user login 
