@@ -30,6 +30,7 @@ def login_success(sender,request,user,**kwargs):
 #after this this will be executed
 
 def login_step2(sender,request,user,**kwargs):
+    
     print("Sent notification")
 
 user_logged_in.connect(login_success,sender=User)#first we registered login_success it will be executed first
@@ -45,9 +46,13 @@ import time
 #called when user login 
 def login_success(sender,request,user,**kwargs):
     print("Login was successfull")
+    
     print("sender",sender)
+    
     print("Request",request)
+    
     print("User",sender)
+    
     time.sleep(20)
 user_logged_in.connect(login_success,sender=User)
 
